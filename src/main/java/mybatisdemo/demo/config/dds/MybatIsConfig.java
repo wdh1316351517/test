@@ -48,7 +48,7 @@ public class MybatIsConfig {
         dynamicDataSource.setDefaultDataSource(master());
         //将master 和 slave 数据源作为指定的数据源
         dynamicDataSource.setDataSources(dataSourceMap);
-        return dynamicDataSourceynamicDataSource;
+        return dynamicDataSource;
     }
 
     @Bean
@@ -59,7 +59,7 @@ public class MybatIsConfig {
         sessionFactory.setTypeAliasesPackage("mybatisdemo.demo.**.model"); //扫描model
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         sessionFactory.setMapperLocations(resolver.getResources("classpath*:**/sqlmap/*.xml")); //扫描映射文件
-        return sessionFactory;
+        return sssessionFactory;
     }
 
     @Bean
