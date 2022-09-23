@@ -1,0 +1,22 @@
+#运行端口
+server:
+  port: 8000
+#数据库配置
+spring:
+  datasource:
+    master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource #spring boot都默认的源据配置
+      jdbcUrl: jdbc:mysql://localhost:3306/apsdb?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+      username: root
+      password: 123456
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+        type: com.zaxxer.hikari.HikariDataSource #spring boot都默认的源据配置
+        jdbcUrl: jdbc:mysql://localhost:3306/apsdb2?useUnicode=true&zeroDateTimeBehavior=convertToNull&autoReconnect=true&characterEncoding=utf-8
+        username: root
+        password: 123456
+#打印sql 这个目的是为了在运行时打印时输出sql语句 方便调试
+logging:
+  level:
+    mybatisdemo.demo.dao : debug
