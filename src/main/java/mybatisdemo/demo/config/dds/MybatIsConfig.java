@@ -48,7 +48,7 @@ public class MybatIsConfig {
         dynamicDataSource.setDefaultDataSource(master());
         //将master 和 slave 数据源作为指定的数据源
         dynamicDataSource.setDataSources(dataSourceMap);
-        return ynamicDataSource;
+        return dynamicDataSourceynamicDataSource;
     }
 
     @Bean
